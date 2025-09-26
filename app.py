@@ -1,15 +1,15 @@
 from flask import Flask, render_template
 app=Flask (__name__)
 
-@app.route('/')
+@app.route('/index')
 def index():
     return render_template('INDEX.html',title= 'INDEX', judul="Ini Halaman Index")
 
-@app.route('/')
+@app.route('/biodata')
 def biodata():
     return render_template('BIODATA.html',title= 'BIODATA', judul="Ini Halaman Biodata")
 
-@app.route('/')
+@app.route('/about')
 def about():
     return render_template('ABOUT.html',title= 'ABOUT', judul="Ini Halaman ABOUT")
 
