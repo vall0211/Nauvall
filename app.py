@@ -3,11 +3,15 @@ app=Flask (__name__)
 
 @app.route('/')
 def index():
-    return render_template('INDEX.html',title= 'Exalty')
+    return render_template('INDEX.html',title= 'INDEX', judul="Ini Halaman Index")
 
-@app.route('/about')
+@app.route('/')
+def biodata():
+    return render_template('BIODATA.html',title= 'BIODATA', judul="Ini Halaman Biodata")
+
+@app.route('/')
 def about():
-    return "ini halaman about"
+    return render_template('ABOUT.html',title= 'ABOUT', judul="Ini Halaman ABOUT")
 
 @app.route('/halo/<name>')
 def halo(name):
